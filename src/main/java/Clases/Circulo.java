@@ -4,28 +4,45 @@
  */
 package Clases;
 
+import java.awt.Color;
+
 /**
  *
  * @author sebai
  */
-public class Circulo {
+public class Circulo extends Forma{
     double diametro;
 
-    public Circulo(double diametro) {
+    public Circulo(double diametro, Color color) {
+        super(color);
         this.diametro = diametro;
     }
+
+   
 
     public double getDiametro() {
         return diametro;
     }
     
-    public double area(){
+   /* public double area(){
      return Math.pow((diametro/2),2)*Math.PI;
-    }
+    }*/
     
-    public double perimetro(){
+    /*public double perimetro(){
     return diametro*Math.PI;
     }
+*/
+    @Override
+    public double calcularArea() {
+        return Math.pow((diametro/2),2)*Math.PI;
+    }
+    @Override
+    public double perimetro() {
+        return diametro*Math.PI;
+    }
+    
+    
+    
    
     
 }

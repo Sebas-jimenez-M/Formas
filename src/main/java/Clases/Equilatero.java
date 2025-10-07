@@ -1,20 +1,24 @@
 
 package Clases;
 
+import java.awt.Color;
+
 public class Equilatero extends Triangulo{
 
-    public Equilatero(double lado1, double lado2, double base, double altura) {
-        super(lado1, lado2, base, altura);
+    public Equilatero(double base, double altura, Color color) {
+        super(base, base, base, altura, color);
     }
 
-    @Override
-    public double area() {
-        return (this.base*this.altura)/2; 
+    
+
+   @Override
+    public double calcularArea() {
+        return base*altura/2;
     }
 
     @Override
     public double perimetro() {
-        return this.lado1*3;
+        return base+base+base;
     }
     
     

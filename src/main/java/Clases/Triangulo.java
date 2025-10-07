@@ -1,24 +1,23 @@
 
 package Clases;
 
+import java.awt.Color;
 
-public class Triangulo {
+
+public class Triangulo extends Forma{
     double lado1,lado2,base,altura;
 
-    public Triangulo(double lado1, double lado2,  double base, double altura) {
+    public Triangulo(double lado1, double lado2, double base, double altura, Color color) {
+        super(color);
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.base = base;
         this.altura = altura;
     }
 
-    public double area(){
-    return base*altura/2;
-    }
     
-    public double perimetro(){
-    return base+lado1+lado2;
-    }
+
+    
     
     
     public double getLado1() {
@@ -37,7 +36,23 @@ public class Triangulo {
     public double getAltura() {
         return altura;
     }
+
+    @Override
+    public double calcularArea() {
+        return base*altura/2;
+    }
+
+    @Override
+    public double perimetro() {
+        return base+lado1+lado2;
+    }
     
+    /*public double area(){
+    return base*altura/2;
+    }
     
+    public double perimetro(){
+    return base+lado1+lado2;
+    }*/
    
 }

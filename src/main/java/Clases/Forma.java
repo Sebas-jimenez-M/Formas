@@ -2,7 +2,7 @@ package Clases;
 
 import java.awt.Color;
 
-public class Forma {
+public abstract class Forma {
     public Color color;
 
     public Forma(Color color) {
@@ -13,5 +13,6 @@ public class Forma {
         return color;
     }
     
-    
+    public abstract double calcularArea();
+    public abstract double perimetro();
 }
